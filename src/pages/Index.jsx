@@ -1,10 +1,15 @@
-import { Box, Flex, Heading, Link } from '@chakra-ui/react';
+import { useEffect } from 'react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Biography from './Biography';
 import Gallery from './Gallery';
 import Contact from './Contact';
 
 const Index = () => {
+  useEffect(() => {
+    console.log("Components are mounted and rendered");
+  }, []);
+
   return (
     <Router>
       <Box p={4}>
